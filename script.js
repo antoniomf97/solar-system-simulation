@@ -12,12 +12,21 @@ function setup() {
     }
 
     bodys.push(new Body(center=sun, radius=10, distance=150, angle=90, c=[255,255,255]));
-    bodys.push(new Body(center=bodys[0], radius=2, distance=25, angle=45, c=[255,255,255], tier=2));
+    bodys.push(new Body(center=bodys[0], radius=3, distance=25, angle=45, c=[255,255,255], tier=2));
     bodys.push(new Body(center=bodys[0], radius=2, distance=40, angle=20, c=[255,255,255], tier=3));
-    bodys.push(new Body(center=bodys[0], radius=4, distance=50, angle=20, c=[255,255,255], tier=3));
+    bodys.push(new Body(center=bodys[0], radius=5, distance=50, angle=20, c=[255,255,255], tier=3));
 
+
+    bodys.push(new Body(center=sun, radius=7, distance=75, angle=45, c=[255,255,255]));
     bodys.push(new Body(center=sun, radius=10, distance=220, angle=90, c=[255,255,255]));
-    bodys.push(new Body(center=sun, radius=15, distance=250, angle=90, c=[255,255,255]));
+    bodys.push(new Body(center=sun, radius=20, distance=270, angle=90, c=[255,255,255]));
+    bodys.push(new Body(center=bodys[6], radius=3, distance=30, angle=90, c=[255,255,255]));
+    bodys.push(new Body(center=sun, radius=30, distance=370, angle=45, c=[255,255,255]));
+    bodys.push(new Body(center=bodys[8], radius=5, distance=60, angle=90, c=[255,255,255], tier=3));
+    
+    bodys.push(new Body(center=bodys[9], radius=2, distance=10, angle=90, c=[255,255,255], tier=4));
+    bodys.push(new Body(center=bodys[8], radius=5, distance=40, angle=90, c=[255,255,255], tier=3));
+
 }
 
 function draw() {
