@@ -1,39 +1,39 @@
-class Sun {
-    constructor(r, c) {
-        this.r = r;    
-        this.c = color(c[0], c[1], c[2]);
-
-        this.bodies = [];
-    }
-
-    show() {
-        fill(this.c);
-        ellipse(0, 0, this.r*2, this.r*2);
-    }
-}
-
 class Body {
-    constructor(r, d, a, c) {
-        this.r = r;
-        this.a = a;
-        this.d = d;
-        this.pi = createVector(d * cos(a), this.d * sin(a));
-        this.vi = 0.05 * random(1, 5);
-        
-        this.c = color(c[0], c[1], c[2]);
+    constructor(center, radius, distance, angle, c, tier=1) {
+        this.c = center;
+        this.r = radius;
 
-        this.bodies = [];
+        this.a = radians(angle);
+        this.d = distance;
+        this.p = p5.Vector.fromAngle(this.a).mult(this.d);
+        
+        this.v = random(1, 3) * tier;
+        this.color = color(c[0], c[1], c[2]);
+    }
+
+    get pos() {
+        return p5.Vector.add(this.c.pos, this.p);
     }
 
     update() {
-        this.v = this.vi * speedSlider.value();
-        this.a += this.v;
-        rotate(this.angle);
-        this.p = createVector(this.d * cos(this.a), this.d * sin(this.a));
+        this.a += this.v * speedSlider.value();
+        this.p = p5.Vector.fromAngle(this.a).mult(this.d);
     }
 
-    show() {
-        fill(this.c);
-        ellipse(this.p.x, this.p.y, this.r*2, this.r*2);
+    draw() {
+        push();
+        translate(this.c.pos);
+        fill(this.color);
+        ellipse(this.p.x, this.p.y, this.r*2);
+        pop();
+    }
+
+    orbit() {
+        push();
+        noFill();
+        strokeWeight(1);
+        stroke([50,50,50]);
+        ellipse(this.c.pos.x, this.c.pos.y, this.d*2);
+        pop();
     }
 }

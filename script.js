@@ -1,4 +1,4 @@
-let sun;
+let center;
 const bodys = [];
 
 function setup() {
@@ -6,22 +6,29 @@ function setup() {
     
     speedSlider = createSlider(0.0001, 0.1, 0.01, 0.0001);
 
-    sun = new Sun(r=25, c=[255, 255, 255])
-    bodys.push(new Body(r=5, d=75, a=1, c=[200, 150, 0]));
-    bodys.push(new Body(r=10, d=100, a=0.5, c=[0, 150, 200]));
-    bodys.push(new Body(r=5, d=200, a=3, c=[200, 50, 0]));
-    bodys.push(new Body(r=7, d=250, a=4.5, c=[50, 150, 50]));
-    bodys.push(new Body(r=15, d=275, a=1, c=[100, 100, 250]));
+    sun = {
+        r: 50,
+        pos: createVector(width / 2, height / 2)
+    }
+
+    bodys.push(new Body(center=sun, radius=10, distance=150, angle=90, c=[255,255,255]));
+    bodys.push(new Body(center=bodys[0], radius=2, distance=25, angle=45, c=[255,255,255], tier=2));
+    bodys.push(new Body(center=bodys[0], radius=2, distance=40, angle=20, c=[255,255,255], tier=3));
+    bodys.push(new Body(center=bodys[0], radius=4, distance=50, angle=20, c=[255,255,255], tier=3));
+
+    bodys.push(new Body(center=sun, radius=10, distance=220, angle=90, c=[255,255,255]));
+    bodys.push(new Body(center=sun, radius=15, distance=250, angle=90, c=[255,255,255]));
 }
 
 function draw() {
     background(20);
-    
-    translate(width/2, height/2);
 
-    sun.show();
+    fill(255);
+    ellipse(sun.pos.x, sun.pos.y, sun.r*2);
+
     for (let body of bodys) {
         body.update();
-        body.show();
+        body.orbit();
+        body.draw();
     }
 }
