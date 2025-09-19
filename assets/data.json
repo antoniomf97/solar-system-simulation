@@ -1,0 +1,47 @@
+{ "bodies": [
+    {  
+        "label": 1,
+        "center": 0,
+        "radius": 7,
+        "distance": 75,
+        "angle": -45,
+        "color": [255,255,255],
+        "velocity": 1
+    },    
+    {
+        "label": 2,
+        "center": 0,
+        "radius": 15,
+        "distance": 150,
+        "angle": 45,
+        "color": [255,255,255],
+        "velocity": 1
+    },    
+    {
+        "label": 3,
+        "center": 1,
+        "radius": 2,
+        "distance": 25,
+        "angle": -45,
+        "color": [255,255,255],
+        "velocity": 10
+    },    
+    {
+        "label": 3,
+        "center": 1,
+        "radius": 5,
+        "distance": 35,
+        "angle": -90,
+        "color": [255,255,255],
+        "velocity": 6
+    },    
+    {
+        "label": 4,
+        "center": 0,
+        "radius": 4,
+        "distance": 100,
+        "angle": -90,
+        "color": [255,255,255],
+        "velocity": 1
+    }]
+}

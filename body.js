@@ -1,5 +1,5 @@
 class Body {
-    constructor(center, radius, distance, angle, c, tier=1) {
+    constructor(center, radius, distance, angle, c, velocity) {
         this.c = center;
         this.r = radius;
 
@@ -7,7 +7,7 @@ class Body {
         this.d = distance;
         this.p = p5.Vector.fromAngle(this.a).mult(this.d);
         
-        this.v = random(1, 3) * tier;
+        this.v = velocity;
         this.color = color(c[0], c[1], c[2]);
     }
 
