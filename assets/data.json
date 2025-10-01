@@ -12,36 +12,108 @@
         "label": 2,
         "center": 0,
         "radius": 15,
-        "distance": 150,
+        "distance": 160,
         "angle": 45,
         "color": [255,255,255],
-        "velocity": 1
+        "velocity": -2
     },    
     {
         "label": 3,
         "center": 1,
-        "radius": 2,
+        "radius": 4,
         "distance": 25,
         "angle": -45,
+        "color": [255,255,255],
+        "velocity": 8
+    },    
+    {
+        "label": 4,
+        "center": 1,
+        "radius": 5,
+        "distance": 41,
+        "angle": -90,
+        "color": [255,255,255],
+        "velocity": -5
+    },
+    {
+        "label": 5,
+        "center": 3,
+        "radius": 2,
+        "distance": 10,
+        "angle": -90,
         "color": [255,255,255],
         "velocity": 10
     },    
     {
-        "label": 3,
-        "center": 1,
-        "radius": 5,
-        "distance": 35,
-        "angle": -90,
-        "color": [255,255,255],
-        "velocity": 6
-    },    
-    {
-        "label": 4,
+        "label": 6,
         "center": 0,
-        "radius": 4,
+        "radius": 5,
         "distance": 100,
         "angle": -90,
         "color": [255,255,255],
+        "velocity": 2
+    },
+    {
+        "label": 7,
+        "center": 0,
+        "radius": 20,
+        "distance": 260,
+        "angle": 180,
+        "color": [255,255,255],
         "velocity": 1
+    },
+    {
+        "label": 8,
+        "center": 6,
+        "radius": 2,
+        "distance": 27,
+        "angle": 180,
+        "color": [255,255,255],
+        "velocity": -7
+    },
+    {
+        "label": 9,
+        "center": 6,
+        "radius": 2,
+        "distance": 31,
+        "angle": 70,
+        "color": [255,255,255],
+        "velocity": 6
+    },
+    {
+        "label": 8,
+        "center": 6,
+        "radius": 2,
+        "distance": 34,
+        "angle": -45,
+        "color": [255,255,255],
+        "velocity": -4
+    },
+    {
+        "label": 8,
+        "center": 6,
+        "radius": 2,
+        "distance": 39,
+        "angle": 8,
+        "color": [255,255,255],
+        "velocity": 3
+    },
+    {
+        "label": 8,
+        "center": 6,
+        "radius": 2,
+        "distance": 43,
+        "angle": 0,
+        "color": [255,255,255],
+        "velocity": 4
+    },
+    {  
+        "label": 1,
+        "center": 0,
+        "radius": 2,
+        "distance": 89,
+        "angle": -45,
+        "color": [255,255,255],
+        "velocity": -3
     }]
 }
